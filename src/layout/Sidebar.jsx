@@ -19,8 +19,14 @@ export default function Sidebar({ current, onNavigate }) {
 
   return (
     <aside ref={scope} className="fixed left-0 top-0 z-30 hidden h-screen w-64 border-r border-white/80 bg-white/90 p-5 shadow-soft backdrop-blur xl:block">
-      <div className="mb-8 rounded-2xl bg-white px-2 py-3 shadow-sm">
-        <img src="/brand-logo.png" alt="银邻互助站 - 温暖关怀，邻里互助" className="h-14 w-full object-contain" />
+      <div className="mb-8 flex items-center gap-3">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-campus-orangeSoft">
+          <img src="/brand-mark.png" alt="银邻互助站" className="h-9 w-9 object-contain" />
+        </div>
+        <div className="min-w-0">
+          <p className="text-lg font-black text-campus-ink">银邻互助站</p>
+          <p className="text-xs font-semibold text-campus-muted">温暖关怀 · 邻里互助</p>
+        </div>
       </div>
 
       <nav className="space-y-2">
@@ -32,10 +38,10 @@ export default function Sidebar({ current, onNavigate }) {
               key={route.key}
               onClick={() => onNavigate(route.key)}
               className={`relative flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold transition ${
-                active ? "bg-campus-greenSoft text-campus-green" : "text-campus-muted hover:bg-slate-50 hover:text-campus-ink"
+                active ? "bg-campus-orangeSoft text-campus-orange" : "text-campus-muted hover:bg-slate-50 hover:text-campus-ink"
               }`}
             >
-              {active ? <span className="active-indicator absolute left-0 h-7 w-1 rounded-r-full bg-campus-green" /> : null}
+              {active ? <span className="active-indicator absolute left-0 h-7 w-1 rounded-r-full bg-campus-orange" /> : null}
               <Icon size={19} strokeWidth={2.25} />
               {route.label}
             </button>
@@ -43,7 +49,7 @@ export default function Sidebar({ current, onNavigate }) {
         })}
       </nav>
 
-      <div className="absolute bottom-5 left-5 right-5 overflow-hidden rounded-2xl bg-gradient-to-br from-campus-orangeSoft to-campus-greenSoft p-4">
+      <div className="absolute bottom-5 left-5 right-5 overflow-hidden rounded-2xl bg-gradient-to-br from-campus-orangeSoft to-orange-100 p-4">
         <Building2 className="mb-3 text-campus-orange" size={26} />
         <p className="text-sm font-black text-campus-ink">共建温暖社区</p>
         <p className="mt-1 text-xs leading-5 text-campus-muted">让社区里每一位老人，都能被及时看见和温暖回应。</p>
