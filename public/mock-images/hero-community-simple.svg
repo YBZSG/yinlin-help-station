@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">校园互助服务插画</title>
+  <desc id="desc">简洁的校园公告栏、共享雨伞、书本和互助服务桌。</desc>
+  <rect width="640" height="400" rx="32" fill="#EFF8F3"/>
+  <circle cx="536" cy="76" r="56" fill="#DDF2EA"/>
+  <circle cx="92" cy="318" r="72" fill="#EAF3FB"/>
+  <path d="M64 292h512" stroke="#D7E8DF" stroke-width="8" stroke-linecap="round"/>
+
+  <g transform="translate(84 74)">
+    <rect x="0" y="42" width="178" height="172" rx="18" fill="#FFFFFF" stroke="#D9E7E1" stroke-width="4"/>
+    <rect x="20" y="64" width="138" height="24" rx="8" fill="#2F9E7E"/>
+    <rect x="20" y="106" width="64" height="48" rx="10" fill="#FFF1DD"/>
+    <rect x="98" y="106" width="60" height="48" rx="10" fill="#EAF3FB"/>
+    <path d="M30 178h118M30 196h86" stroke="#9AB0A7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M28 42V16M150 42V16" stroke="#2F9E7E" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(316 102)">
+    <path d="M42 92c20-42 98-42 122 0" fill="#F5A54A"/>
+    <path d="M42 92h122c-17 12-26 12-41 0-16 12-27 12-42 0-15 12-25 12-39 0Z" fill="#2F9E7E"/>
+    <path d="M103 92v82c0 22-34 22-34 0" fill="none" stroke="#102A43" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(332 234)">
+    <rect x="0" y="34" width="172" height="24" rx="8" fill="#2775B6"/>
+    <rect x="12" y="10" width="158" height="28" rx="8" fill="#FFFFFF" stroke="#D9E7E1" stroke-width="4"/>
+    <rect x="28" y="-18" width="132" height="30" rx="8" fill="#F59F43"/>
+    <path d="M36 24h96M46 -2h82" stroke="#102A43" stroke-opacity=".22" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(98 278)">
+    <rect x="0" y="0" width="430" height="18" rx="9" fill="#2F9E7E"/>
+    <path d="M26 18h22v46H26zM382 18h22v46h-22z" fill="#102A43" opacity=".16"/>
+  </g>
+
+  <g transform="translate(505 222)">
+    <rect x="0" y="0" width="54" height="54" rx="16" fill="#FFFFFF" stroke="#D9E7E1" stroke-width="4"/>
+    <path d="M16 27h22M27 16v22" stroke="#F56B61" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
