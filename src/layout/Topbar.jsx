@@ -62,7 +62,8 @@ export default function Topbar({
     <header className="sticky top-0 z-20 mb-5 border-b border-white/80 bg-campus-bg/95 px-5 py-3 backdrop-blur sm:px-6 md:px-8 xl:ml-64">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[max-content_minmax(320px,1fr)_auto] xl:grid-cols-[max-content_minmax(420px,1fr)_auto] xl:gap-5">
-          <div className="min-w-0 lg:pr-2">
+          <div className="flex min-w-0 items-center gap-3 lg:pr-2">
+            <img src="/brand-mark.png" alt="银邻互助站" className="h-10 w-10 shrink-0 rounded-2xl object-contain sm:h-11 sm:w-11" />
             <h1 className="truncate text-2xl font-black leading-tight text-campus-ink sm:text-3xl">{title}</h1>
           </div>
 

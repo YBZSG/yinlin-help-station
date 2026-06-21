@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Building2, HeartHandshake } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "../animations/gsapSetup";
 import { routes } from "../constants/routes";
@@ -19,14 +19,8 @@ export default function Sidebar({ current, onNavigate }) {
 
   return (
     <aside ref={scope} className="fixed left-0 top-0 z-30 hidden h-screen w-64 border-r border-white/80 bg-white/90 p-5 shadow-soft backdrop-blur xl:block">
-      <div className="mb-8 flex items-center gap-3">
-        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-campus-orange text-white">
-          <HeartHandshake size={23} />
-        </div>
-        <div>
-          <p className="text-lg font-black text-campus-ink">银邻互助站</p>
-          <p className="text-xs font-semibold text-campus-muted">温暖关怀 · 邻里互助</p>
-        </div>
+      <div className="mb-8 rounded-2xl bg-white px-2 py-3 shadow-sm">
+        <img src="/brand-logo.png" alt="银邻互助站 - 温暖关怀，邻里互助" className="h-14 w-full object-contain" />
       </div>
 
       <nav className="space-y-2">
