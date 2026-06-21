@@ -19,14 +19,10 @@ export default function Sidebar({ current, onNavigate }) {
 
   return (
     <aside ref={scope} className="fixed left-0 top-0 z-30 hidden h-screen w-64 border-r border-white/80 bg-white/90 p-5 shadow-soft backdrop-blur xl:block">
-      <div className="mb-8 flex items-center gap-3">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-campus-orangeSoft">
-          <img src="/brand-mark.png" alt="银邻互助站" className="h-9 w-9 object-contain" />
-        </div>
-        <div className="min-w-0">
-          <p className="text-lg font-black text-campus-ink">银邻互助站</p>
-          <p className="text-xs font-semibold text-campus-muted">温暖关怀 · 邻里互助</p>
-        </div>
+      <div className="mb-8 text-center">
+        <img src="/brand-symbol.png" alt="银邻互助站" className="mx-auto h-16 w-16 object-contain" />
+        <p className="mt-2 text-lg font-black text-campus-ink">银邻互助站</p>
+        <p className="mt-0.5 text-xs font-semibold text-campus-muted">温暖关怀 · 邻里互助</p>
       </div>
 
       <nav className="space-y-2">
