@@ -93,7 +93,7 @@ function HotItems({ items, onNavigate }) {
       <SectionHeader title="热门适老物品" action="查看全部" onAction={() => onNavigate("items")} />
       <div className="space-y-3">
         {items.slice(0, 4).map((item, index) => (
-          <div key={item.id} className="grid grid-cols-[88px_1fr_auto] items-center gap-3 rounded-2xl p-2 transition hover:bg-slate-50">
+          <div key={item.id} className="grid grid-cols-[88px_minmax(0,1fr)] items-center gap-3 rounded-2xl p-2 transition hover:bg-slate-50 sm:grid-cols-[88px_minmax(0,1fr)_auto]">
             <img src={item.image} alt={item.name} className="h-16 w-22 rounded-xl object-cover" />
             <div className="min-w-0">
               <div className="flex items-center gap-2">
@@ -106,7 +106,7 @@ function HotItems({ items, onNavigate }) {
               </p>
               <p className="mt-1 text-xs text-campus-muted">{index + 2} 小时前</p>
             </div>
-            <div className="text-right">
+            <div className="col-span-2 flex items-center justify-end gap-3 sm:col-span-1 sm:block sm:text-right">
               <p className="mb-2 flex items-center justify-end gap-1 text-xs font-semibold text-campus-muted">
                 <Heart size={14} />
                 {24 - index * 5}
@@ -342,10 +342,10 @@ export default function Dashboard({ state, region, onNavigate }) {
         <StatCard label="本月上门关怀" value={metrics.homeVisitCount} icon={HomeIcon} tone="orange" onClick={() => onNavigate("volunteer")} />
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[1.1fr_1fr_.9fr]">
+      <div className="grid gap-5 xl:grid-cols-2 2xl:grid-cols-[1.1fr_1fr_.9fr]">
         <LatestActivity onNavigate={onNavigate} />
         <HotItems items={state.items} onNavigate={onNavigate} />
-        <div className="space-y-5">
+        <div className="space-y-5 xl:col-span-2 2xl:col-span-1">
           <VolunteerRank onNavigate={onNavigate} />
           <ConvenienceServices onNavigate={onNavigate} />
         </div>
