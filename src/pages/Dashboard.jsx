@@ -67,15 +67,18 @@ function LatestActivity({ onNavigate }) {
       <SectionHeader title="最近社区动态" action="查看全部" onAction={() => onNavigate("help")} />
       <div className="space-y-1">
         {activities.map((item) => (
-          <div key={item.id} className="flex items-center gap-3 rounded-2xl px-3 py-2.5 transition hover:bg-slate-50">
+          <div key={item.id} className="flex items-start gap-3 rounded-2xl px-2 py-3 transition hover:bg-slate-50 sm:items-center sm:px-3 sm:py-2.5">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-campus-orangeSoft text-xs font-black text-campus-orange">
               {item.name.slice(0, 1)}
             </div>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-bold text-campus-ink">{item.name} {item.title}</p>
-              <Badge tone={activityTone[item.tag]} className="mt-1">{item.tag}</Badge>
+              <p className="line-clamp-2 text-sm font-bold leading-6 text-campus-ink sm:truncate">{item.name} {item.title}</p>
+              <div className="mt-1 flex flex-wrap items-center gap-2">
+                <Badge tone={activityTone[item.tag]}>{item.tag}</Badge>
+                <span className="text-xs font-semibold text-campus-muted sm:hidden">{item.time}</span>
+              </div>
             </div>
-            <span className="text-xs font-semibold text-campus-muted">{item.time}</span>
+            <span className="hidden shrink-0 text-xs font-semibold text-campus-muted sm:inline">{item.time}</span>
           </div>
         ))}
       </div>
