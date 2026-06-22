@@ -152,12 +152,12 @@ export default function CampusThreeMap({ intensity = 1, zoneStats = [], region =
   }, [intensity, region, JSON.stringify(zoneStats)]);
 
   return (
-    <div className="relative h-[360px] min-h-[320px] overflow-hidden rounded-2xl border border-orange-100 bg-gradient-to-br from-white to-orange-50">
+    <div className="relative h-[300px] min-h-[280px] overflow-hidden rounded-2xl border border-orange-100 bg-gradient-to-br from-white to-orange-50 sm:h-[360px] sm:min-h-[320px]">
       <div ref={hostRef} className="absolute inset-0" aria-label="社区关怀网络三维地图" />
-      <div className="pointer-events-none absolute left-4 top-4 rounded-2xl bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
+      <div className="pointer-events-none absolute left-3 right-3 top-3 rounded-2xl bg-white/90 px-3 py-2 shadow-sm backdrop-blur sm:left-4 sm:right-auto sm:top-4 sm:px-4 sm:py-3">
         <p className="text-sm font-black text-campus-ink">社区关怀网络图</p>
         <p className="mt-1 text-xs font-semibold text-campus-muted">{region} · 柱子越高代表该区域越活跃</p>
-        <p className="mt-1 text-xs font-semibold text-campus-muted">按住画面可以拖动旋转</p>
+        <p className="mt-1 hidden text-xs font-semibold text-campus-muted sm:block">按住画面可以拖动旋转</p>
       </div>
       <div className="pointer-events-none absolute right-4 top-4 hidden w-36 space-y-2 rounded-2xl bg-white/85 p-3 text-xs font-bold text-campus-muted shadow-sm backdrop-blur sm:block">
         {zones.map((zone) => (
@@ -167,9 +167,9 @@ export default function CampusThreeMap({ intensity = 1, zoneStats = [], region =
           </div>
         ))}
       </div>
-      <div className="pointer-events-none absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-2 text-xs font-bold text-campus-muted sm:grid-cols-5">
+      <div className="pointer-events-none absolute bottom-3 left-3 right-3 flex gap-2 overflow-hidden text-xs font-bold text-campus-muted sm:bottom-4 sm:left-4 sm:right-4 sm:grid sm:grid-cols-5">
         {zones.map((zone) => (
-          <span key={zone.name} className={`rounded-xl px-3 py-2 text-center shadow-sm backdrop-blur ${zone.active ? "bg-white text-campus-orange ring-1 ring-campus-orange/25" : "bg-white/70 opacity-70"}`}>
+          <span key={zone.name} className={`min-w-[7.5rem] flex-1 rounded-xl px-3 py-2 text-center shadow-sm backdrop-blur sm:min-w-0 ${zone.active ? "bg-white text-campus-orange ring-1 ring-campus-orange/25" : "bg-white/70 opacity-70"}`}>
             <span className="block text-campus-ink">{zone.name}</span>
             <span className="mt-0.5 block text-[11px]">{zone.desc}</span>
           </span>
