@@ -59,23 +59,23 @@ export default function Topbar({
   }
 
   return (
-    <header className="sticky top-0 z-20 mb-5 border-b border-white/80 bg-campus-bg/95 px-5 py-3 backdrop-blur sm:px-6 md:px-8 xl:ml-64">
+    <header className="sticky top-0 z-20 mb-4 border-b border-white/80 bg-campus-bg/95 px-4 py-3 backdrop-blur sm:mb-5 sm:px-6 md:px-8 xl:ml-64">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[max-content_minmax(320px,1fr)_auto] xl:grid-cols-[max-content_minmax(420px,1fr)_auto] xl:gap-5">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:gap-3 lg:grid-cols-[max-content_minmax(320px,1fr)_auto] xl:grid-cols-[max-content_minmax(420px,1fr)_auto] xl:gap-5">
           <div className="flex min-w-0 items-center gap-3 lg:pr-2">
             <img src="/brand-symbol.png" alt="银邻互助站" className="h-10 w-10 shrink-0 rounded-2xl object-contain sm:h-11 sm:w-11" />
-            <h1 className="truncate text-2xl font-black leading-tight text-campus-ink sm:text-3xl">{title}</h1>
+            <h1 className="truncate text-xl font-black leading-tight text-campus-ink sm:text-3xl">{title}</h1>
           </div>
 
-          <form onSubmit={submitSearch} className="order-3 col-span-2 flex min-h-12 w-full items-center gap-2 rounded-2xl border border-slate-100 bg-white px-4 py-2 shadow-soft transition focus-within:border-campus-orange lg:order-none lg:col-span-1 lg:min-w-0">
+          <form onSubmit={submitSearch} className="order-3 col-span-2 flex min-h-11 w-full items-center gap-2 rounded-2xl border border-slate-100 bg-white px-3 py-2 shadow-soft transition focus-within:border-campus-orange sm:min-h-12 sm:px-4 lg:order-none lg:col-span-1 lg:min-w-0">
             <Search size={20} className="shrink-0 text-slate-400" />
             <input
               value={keyword}
               onChange={(event) => setKeyword(event.target.value)}
               placeholder="搜索物品、求助、活动、资料..."
-              className="h-9 min-w-0 flex-1 bg-transparent text-sm font-bold text-campus-ink outline-none placeholder:text-campus-muted"
+              className="h-8 min-w-0 flex-1 bg-transparent text-sm font-bold text-campus-ink outline-none placeholder:text-campus-muted sm:h-9"
             />
-            <button type="submit" className="shrink-0 rounded-xl bg-campus-orangeSoft px-3 py-2 text-xs font-bold text-campus-orange transition hover:bg-orange-100">
+            <button type="submit" className="shrink-0 rounded-xl bg-campus-orangeSoft px-3 py-1.5 text-xs font-bold text-campus-orange transition hover:bg-orange-100 sm:py-2">
               搜索
             </button>
           </form>

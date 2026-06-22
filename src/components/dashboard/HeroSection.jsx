@@ -19,13 +19,13 @@ export default function HeroSection({ onNavigate }) {
   );
 
   return (
-    <section ref={scope} className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-soft md:p-8">
+    <section ref={scope} className="relative overflow-hidden rounded-2xl bg-white p-5 shadow-soft md:p-8">
       <div className="absolute right-4 top-4 hidden h-24 w-24 rounded-full bg-campus-orangeSoft md:block" />
       <div className="grid items-center gap-6 md:grid-cols-[1.4fr_.8fr]">
         <div>
           <span className="hero-title inline-block rounded-full bg-campus-orangeSoft px-3 py-1 text-xs font-bold text-campus-orange">银邻互助站 · 温暖社区</span>
-          <h2 className="hero-title mt-3 text-3xl font-black leading-tight text-campus-ink md:text-4xl">一个按钮发布求助，一群邻里及时回应。</h2>
-          <p className="hero-copy mt-4 max-w-2xl text-base leading-8 text-campus-muted">
+          <h2 className="hero-title mt-3 text-2xl font-black leading-tight text-campus-ink sm:text-3xl md:text-4xl">一个按钮发布求助，一群邻里及时回应。</h2>
+          <p className="hero-copy mt-4 max-w-2xl text-sm leading-7 text-campus-muted sm:text-base sm:leading-8">
             代买药品、陪同就医、上门关怀、活动陪伴，都能在这里找到帮助。让社区里的每一位老人，都能被及时看见和温暖回应。
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

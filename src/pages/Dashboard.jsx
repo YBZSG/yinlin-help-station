@@ -212,16 +212,16 @@ function EmergencyStrip({ onEmergencyAction }) {
   return (
     <Card className="gsap-reveal border-red-100 bg-red-50/70">
       <div className="grid items-center gap-4 lg:grid-cols-[1fr_auto]">
-        <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-red-500">
+        <div className="flex items-start gap-3 sm:items-center sm:gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-red-500 sm:h-14 sm:w-14">
             <Siren size={28} />
           </div>
           <div>
-            <h2 className="text-xl font-black text-red-600">紧急情况 · 立即求助</h2>
-            <p className="mt-1 text-sm text-red-500/80">如遇突发疾病、严重摔倒、意识不清，请立即拨打 120 并联系家属。</p>
+            <h2 className="text-lg font-black text-red-600 sm:text-xl">紧急情况 · 立即求助</h2>
+            <p className="mt-1 text-sm leading-6 text-red-500/80">如遇突发疾病、严重摔倒、意识不清，请立即拨打 120 并联系家属。</p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
           {actions.map((action) => {
             const Icon = action.icon;
             return (
@@ -229,10 +229,10 @@ function EmergencyStrip({ onEmergencyAction }) {
                 key={action.label}
                 type="button"
                 onClick={() => onEmergencyAction(action.action)}
-                className="flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-4 text-base font-black text-campus-ink shadow-sm transition hover:-translate-y-0.5 hover:text-red-500"
+                className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-black text-campus-ink shadow-sm transition hover:-translate-y-0.5 hover:text-red-500 sm:min-h-14 sm:px-5 sm:text-base"
               >
                 <Icon size={22} className="text-red-500" />
-                {action.label}
+                <span className="whitespace-nowrap">{action.label}</span>
               </button>
             );
           })}
